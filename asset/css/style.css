@@ -1,0 +1,432 @@
+:root {
+  /* Primary colours */
+  --primary-color: #38bdf8; /* Sky blue */
+  --secondary-color: #c2410c; /* Dark orange */
+
+  /* Background colours */
+  --background-color: #ffffff; /* White */
+  --card-background: #f0f9ff; /* Very light blue */
+  --footer-background: #0f172a; /* Dark navy */
+
+  /* Text colours */
+  --text-color: #0f172a; /* Dark navy */
+  --text-light: #ffffff; /* White text */
+  --text-muted: #475569; /* Muted grey */
+
+  /* Borders and effects */
+  --border-color: #cbd5e1; /* Light grey-blue */
+  --shadow-color: rgba(15, 23, 42, 0.12);
+
+  /* Button colours */
+  --button-primary: #c2410c; /* Dark orange */
+  --button-primary-hover: #9a3412; /* Darker orange */
+
+  /* General styling */
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Landing page styling */
+/* Navbar container */
+.navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.navcontainer .logo {
+  font-size: 17px;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* navcontent styling */
+.navcontainer .nav-content {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navcontainer .nav-link {
+  list-style-type: none;
+}
+
+.navcontainer a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  transition:
+    transform var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+/* hover effect for nav-link */
+.navcontainer a:hover {
+  color: var(--button-primary-hover);
+  transform: translateX(-5px);
+}
+/* Main/hero intoduction section */
+
+.l-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* Left side: heading and description */
+.l-main .hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Main heading:bold text */
+.l-main h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* Introduction paragraph */
+.l-main .hero-text p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Right side:image */
+.l-main .hero-img {
+  flex: 1;
+}
+
+.l-main .hero-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* Two cards  */
+.l-cards {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+}
+
+/* card 1 */
+.l-cards .about {
+  flex: 1;
+  min-height: 0;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+/* card 2 */
+.l-cards .get-started {
+  flex: 1;
+  min-height: 0;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Hover effects for both cards */
+.l-cards .about:hover,
+.l-cards .get-started:hover {
+  transform: translateY(-5px);
+}
+/* Card headings */
+.l-cards h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* card paragraphs */
+.l-cards p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Get started button */
+.l-cards .btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  background-color: var(--button-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease;
+}
+
+.l-cards .btn:hover {
+  background-color: var(--button-primary-hover);
+  color: var(--text-light);
+  transform: translateY(-5px);
+}
+
+.l-cards .btn a {
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+/* footer styling */
+.l-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  background-color: var(--footer-background);
+  color: var(--text-light);
+}
+
+.l-footer .summary {
+  text-align: left;
+  max-width: 380px;
+}
+.l-footer .summary p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.l-footer h3 {
+  margin: 0 0 14px;
+}
+
+.quick-links ul,
+.contact ul {
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li,
+.contact li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.quick-links a,
+.contact a {
+  display: inline-block;
+  color: var(--text-light);
+  text-decoration: none;
+  transition:
+    transform var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.quick-links a:hover,
+.contact a:hover {
+  transform: translateY(-5px);
+  color: var(--primary-color);
+}
+
+/* style for icon */
+i {
+  margin-right: 8px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+/* End of landing page styling */
+
+/* Forgot password page styling */
+
+/* navbar styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 25px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header .logo a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.header .back {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.forgot-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forgot-form-container {
+  width: 90%;
+  max-width: 360px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+.forgot-form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-form-container input {
+  padding: 10px;
+  margin: 8px;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.forgot-form-container button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 50%;
+  margin-left: 25%;
+  color: var(--text-light);
+  background-color: var(--button-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease;
+}
+
+.forgot-form-container button:hover {
+  background-color: var(--button-primary-hover);
+  transform: translateY(-5px);
+}
+
+.forgot-form-container p {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.forgot-form-container p a {
+  color: var(--text-muted);
+}
+
+.forgot-form-container p a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer {
+  background-color: var(--footer-background);
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 20px;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 15px;
+}
+/* End of forgot password page */
+
+/* Home styling */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-content {
+  text-align: center;
+  background-color: var(--background-color);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--border-color);
+  max-width: 400px;
+}
+
+.soon-image {
+  width: 150px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.home-container h1 {
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.home-container p {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+/* End of home styling */
+
+/* Adjustment: stacks footer sections on smaller screens */
+@media (max-width: 600px) {
+  .l-footer {
+    flex-direction: column;
+    gap: 24px;
+    padding: 28px 20px;
+  }
+
+  .navcontainer {
+    padding: 12px 18px;
+  }
+
+  /* Hero/main content */
+  .l-main {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .l-main .hero-img {
+    width: 100%;
+  }
+
+  .l-main img {
+    height: 250px;
+  }
+
+  /* Cards */
+  .l-cards {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
