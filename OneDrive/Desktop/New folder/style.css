@@ -1,0 +1,367 @@
+
+/* =========================================
+   LEARNATHON LOGIN AND SIGNUP STYLES
+========================================= */
+
+
+/* =========================================
+   1. PAGE DEFAULTS
+========================================= */
+
+.login-page,
+.signup-page {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    color: #0F172A;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   2. HEADERS AND LOGOS
+========================================= */
+
+.login-header,
+.signup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 6%;
+    background-color: #38BDF8;
+}
+
+.login-logo,
+.signup-logo {
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.back-home {
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   3. MAIN CONTENT
+========================================= */
+
+.login-main,
+.signup-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Signup form can be taller */
+.signup-main {
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   4. FORM CARDS
+========================================= */
+
+.login-card,
+.signup-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background-color: #F0F9FF;
+    border: 1px solid #D8EEFA;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* Wider signup form */
+.signup-card {
+    max-width: 500px;
+}
+
+
+/* =========================================
+   5. HEADINGS
+========================================= */
+
+.login-heading,
+.signup-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-heading h1,
+.signup-heading h1 {
+    margin: 0 0 10px;
+    color: #0F172A;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.login-heading p,
+.signup-heading p {
+    margin: 0;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   6. FORM FIELDS
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    padding: 12px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #0F172A;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-group input::placeholder {
+    color: #64748B;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid #0284C7;
+    outline-offset: 2px;
+    border-color: #0284C7;
+}
+
+
+/* =========================================
+   7. PASSWORD GUIDANCE
+========================================= */
+
+.form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #475569;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   8. REMEMBER ME AND FORGOT PASSWORD
+========================================= */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 5px 0 24px;
+}
+
+.text-link {
+    color: #0369A1;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   9. CHECKBOXES
+========================================= */
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0F172A;
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #0369A1;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   10. HOBBIES
+========================================= */
+
+.hobbies-group {
+    min-width: 0;
+    margin: 0 0 22px;
+    padding: 15px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.hobbies-group legend {
+    padding: 0 6px;
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hobbies-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+}
+
+
+/* =========================================
+   11. TERMS AND CONDITIONS
+========================================= */
+
+.terms-group {
+    margin: 8px 0 22px;
+}
+
+
+/* =========================================
+   12. LOGIN AND SIGNUP BUTTONS
+========================================= */
+
+.login-button,
+.signup-button {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0369A1;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #075985;
+}
+
+.login-button:focus-visible,
+.signup-button:focus-visible {
+    outline: 3px solid #38BDF8;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   13. SWITCH BETWEEN LOGIN AND SIGNUP
+========================================= */
+
+.login-switch,
+.signup-switch {
+    margin: 24px 0 0;
+    text-align: center;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.login-switch a,
+.signup-switch a {
+    color: #0369A1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-switch a:hover,
+.signup-switch a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   14. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .login-header,
+    .signup-header {
+        padding: 16px 5%;
+    }
+
+    .login-logo,
+    .signup-logo {
+        font-size: 22px;
+    }
+
+    .back-home {
+        font-size: 12px;
+    }
+
+    .login-main,
+    .signup-main {
+        padding: 25px 14px;
+    }
+
+    .login-card,
+    .signup-card {
+        padding: 24px 18px;
+    }
+
+    .login-heading h1,
+    .signup-heading h1 {
+        font-size: 24px;
+    }
+
+    .form-options {
+        align-items: flex-start;
+    }
+
+    .hobbies-options {
+        gap: 14px;
+    }
+}
